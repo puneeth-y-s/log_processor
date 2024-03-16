@@ -11,10 +11,10 @@ def test_session_info_success():
     """
 
     # Call the process_log_file function with the sample log file
-    result = process_log_file("./samplelog1.txt")
+    response = process_log_file("./samplelog1.txt")
 
     # Extract username, number of sessions, and total duration from the first entry of the result
-    username, number_of_sessions, total_duration = result[0]
+    username, number_of_sessions, total_duration = response[0]
 
     # Assert that the extracted username matches the expected value
     assert username == "ALICE99"
