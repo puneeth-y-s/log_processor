@@ -2,7 +2,7 @@ import sys
 from collections import defaultdict
 from typing import List, Tuple
 
-def process_log_file(file_path) -> List[Tuple[str, int, int]]:
+def process_log_file(file_path: str) -> List[Tuple[str, int, int]]:
     """Process the log file and generate a report of user session details.
 
     Args:
