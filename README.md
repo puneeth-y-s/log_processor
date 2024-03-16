@@ -31,7 +31,7 @@ This script processes a log file containing session details and generates a repo
    pip install pytest
    ```
 
-5. Run the testcases using the below command
+5. Run the test cases using the below command
 
    ```
    pytest test_session_info.py
