@@ -2,6 +2,8 @@ import sys
 from collections import defaultdict
 from typing import List, Tuple
 
+VALID_ACTIONS = ["Start", "End"]
+
 def process_log_file(file_path: str) -> List[Tuple[str, int, int]]:
     """Process the log file and generate a report of user session details.
 
@@ -32,10 +34,13 @@ def process_log_file(file_path: str) -> List[Tuple[str, int, int]]:
 
             # Check if all necessary session details are present in the given log file
             if len(session_details) != 3:
-                raise Exception("Provided log file contains an invalid session details")
+                raise Exception("Provided log file does not contain all the required session details")
 
             # Extract session information
             timestamp, username, action = session_details
+
+            if action not in VALID_ACTIONS:
+                raise Exception(f"Provide file contains an action {action} for the user {username} which is not in valid actions {VALID_ACTIONS} for the session")
 
             # Handle "Start" action
             if action == "Start":
