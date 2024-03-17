@@ -40,7 +40,7 @@ def process_log_file(file_path: str) -> List[Tuple[str, int, int]]:
             timestamp, username, action = session_details
 
             if action not in VALID_ACTIONS:
-                raise Exception(f"Provide file contains an action {action} for the user {username} which is not in valid actions {VALID_ACTIONS} for the session")
+                raise Exception(f"Provided file contains an action {action} for the user {username} which is not in valid actions {VALID_ACTIONS} for the session")
 
             # Handle "Start" action
             if action == "Start":
