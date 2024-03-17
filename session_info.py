@@ -98,8 +98,9 @@ def main():
     report = process_log_file(file_path)
 
     # Print the report
+    print("Username number_of_sessions total_duration(secs)")
     for entry in report:
-        print(f"{entry[0]} {entry[1]} {entry[2]}")
+        print(f"{entry[0]} \t {entry[1]} \t\t {entry[2]} \t")
 
 if __name__ == "__main__":
     main()
